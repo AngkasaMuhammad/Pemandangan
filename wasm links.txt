@@ -1,0 +1,3 @@
+_wasm/initcam.wasm
+_wasm/draw.wasm
+_wasm/audio.wasm

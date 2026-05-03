@@ -1,0 +1,4 @@
+src	subsrc	volume	buftrimstart	buftrimend	bufduration	bufscale	start
+audio	suara angin	.3	0	src	endless	1.0	0.0
+audio	suara ayunan0	.1	0	src	endless	1.0	0.0
+audio	suara ayunan1	.1	0	src	endless	1.0	0.0

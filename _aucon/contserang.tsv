@@ -1,0 +1,4 @@
+src	subsrc	volume	buftrimstart	buftrimend	bufduration	bufscale	start
+audio	suara kebyok	.6	0	src	trimmed	.7	.1
+audio	suara kebyok	.6	0	src	trimmed	.4	.39
+audio	suara kebyok	.6	0	src	trimmed	.75	.7

@@ -1,0 +1,14 @@
+resosemua.json
+resoutil.json
+_aucon/resoaudio.json
+tanah/reso.json
+cam/reso.json
+chara0/reso.json
+bunga/reso.json
+fxretak/reso.json
+batang/reso.json
+daun/reso.json
+rumput/reso.json
+_myinfo0/reso.json
+_myinfo0/resolain.json
+monyet/reso.json

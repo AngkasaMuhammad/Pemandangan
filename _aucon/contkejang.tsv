@@ -1,0 +1,3 @@
+src	subsrc	volume	buftrimstart	buftrimend	bufduration	bufscale	start
+audio	suara kejang	.2	4	src	trimmed	1	0
+audio	suara kejang	.17	6	src	trimmed	.5	0

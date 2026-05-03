@@ -1,0 +1,3 @@
+src	subsrc	volume	buftrimstart	buftrimend	bufduration	bufscale	start
+audio	suara kaki	.2	0	src	trimmed	1	0
+audio	suara kaki	.2	0	src	trimmed	1	.3

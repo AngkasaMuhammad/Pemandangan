@@ -1,0 +1,6 @@
+src	subsrc	volume	buftrimstart	buftrimend	bufduration	bufscale	start
+audio	suara besi0	.2	0	src	trimmed	.7	.0
+audio	suara besi1	.21	0	src	trimmed	.22	.0
+audio	suara besi1	.23	0	src	trimmed	.2	.0
+audio	suara besi1	.24	0	src	trimmed	.15	.0
+audio	suara besi1	.2	0	src	trimmed	.3	.0

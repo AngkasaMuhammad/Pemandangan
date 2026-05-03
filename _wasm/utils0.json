@@ -1,0 +1,151 @@
+[
+	[
+		{
+			"text": "\n(module\n",
+			"visible": true,
+			"time": "228142.84924499824",
+			"speed": "7.981981981981975",
+			"running": true,
+			"color": [
+				{
+					"r": "0",
+					"g": "111",
+					"b": "255",
+					"frame": "0"
+				},
+				{
+					"r": "0",
+					"g": "255",
+					"b": "255",
+					"frame": "1"
+				},
+				{
+					"r": "255",
+					"g": "255",
+					"b": "255",
+					"frame": "1.5"
+				},
+				{
+					"r": "0",
+					"g": "0",
+					"b": "0",
+					"frame": "2"
+				},
+				{
+					"r": "0",
+					"g": "111",
+					"b": "255",
+					"frame": "3"
+				},
+				{
+					"r": "255",
+					"g": "255",
+					"b": "255",
+					"frame": "3.5"
+				},
+				{
+					"r": "0",
+					"g": "255",
+					"b": "111",
+					"frame": "4"
+				}
+			]
+		}
+	],
+	[
+		{
+			"text": "",
+			"visible": false,
+			"time": "0",
+			"speed": "1",
+			"running": false,
+			"color": [
+				{
+					"r": "255",
+					"g": "255",
+					"b": "255",
+					"frame": "0"
+				}
+			]
+		},
+		{
+			"text": "\n(;\n\t(import \"main\" \"getreso\" (func $getreso (param externref) (result externref)))\n(export \"getreso\" (func $getreso))\n\t\n\t(global $strmyinfo0offsetinfo (import \"myStrings\" \"myinfo0offsetinfo\") externref)\n;)\n\t(import \"table\" \"wasmtable0\" (table 2 funcref))\n\t(global $strkerennn (import \"myStrings\" \"kerennn\") externref)\n",
+			"visible": true,
+			"time": "0",
+			"speed": "1",
+			"running": false,
+			"color": [
+				{
+					"r": "255",
+					"g": "255",
+					"b": "155",
+					"frame": "0"
+				}
+			]
+		}
+	],
+	[
+		{
+			"text": "",
+			"visible": false,
+			"time": "0",
+			"speed": "1",
+			"running": false,
+			"color": [
+				{
+					"r": "255",
+					"g": "255",
+					"b": "255",
+					"frame": "0"
+				}
+			]
+		},
+		{
+			"text": "(func $mypersp (export \"mypersp\")\n  (param $fovy f32)\n  (param $width f32)\n  (param $height f32)\n  (param $znear f32)\n  (param $zfar f32)\n\n  (result \n    f32 f32 f32 f32\n    f32 f32 f32 f32\n    f32 f32 f32 f32\n    f32 f32 f32 f32\n  )\n\n  ;; locals\n  (local $aspect f32)\n  (local $x f32)\n  (local $x2 f32)\n  (local $x3 f32)\n  (local $x5 f32)\n  (local $tanv f32)\n  (local $f f32)\n  (local $n f32)\n  (local $f2 f32)\n  (local $den f32)\n  (local $zp f32)\n\n  ;; aspect = width/height\n  local.get $width\n  local.get $height\n  f32.div\n  local.set $aspect\n\n  ;; x = fovy * 0.5\n  local.get $fovy\n  f32.const 0.5\n  f32.mul\n  local.set $x\n\n  ;; x²\n  local.get $x\n  local.get $x\n  f32.mul\n  local.set $x2\n\n  ;; x³\n  local.get $x2\n  local.get $x\n  f32.mul\n  local.set $x3\n\n  ;; x⁵\n  local.get $x3\n  local.get $x2\n  f32.mul\n  local.set $x5\n\n  ;; tan(x) ≈ x + 1/3 x³ + 2/15 x⁵\n  local.get $x\n  local.get $x3\n  f32.const 0.3333333333\n  f32.mul\n  f32.add\n  local.get $x5\n  f32.const 0.1333333333\n  f32.mul\n  f32.add\n  local.set $tanv\n\n  ;; f = 1/tan(x)\n  f32.const 1\n  local.get $tanv\n  f32.div\n  local.set $f\n\n  ;; n = zNear\n  local.get $znear\n  local.set $n\n\n  ;; f2 = zFar\n  local.get $zfar\n  local.set $f2\n\n  ;; den = zfar - znear\n  local.get $f2\n  local.get $n\n  f32.sub\n  local.set $den\n\n  ;; zp = zNear*zFar/(zFar-zNear)\n  local.get $n\n  local.get $f2\n  f32.mul\n  local.get $den\n  f32.div\n  local.set $zp\n\n\n  ;; ------------------------\n  ;; return 16-float matrix\n  ;; ------------------------\n\n  ;; row 0\n  local.get $f\n  local.get $aspect\n  f32.div     ;; m00 = f/aspect\n  f32.const 0 ;; m01\n  f32.const 0 ;; m02\n  f32.const 0 ;; m03\n\n  ;; row 1\n  f32.const 0 ;; m10\n  local.get $f ;; m11\n  f32.const 0 ;; m12\n  f32.const 0 ;; m13\n\n  ;; row 2\n  f32.const 0  ;; m20\n  f32.const 0  ;; m21\n  f32.const 0  ;; m22\n  f32.const -1 ;; m23\n\n  ;; row 3\n  f32.const 0 ;; m30\n  f32.const 0 ;; m31\n  local.get $zp ;; m32 = ≈ 0.01\n  f32.const 0 ;; m33\n)\n",
+			"visible": true,
+			"time": "0",
+			"speed": "1",
+			"running": false,
+			"color": [
+				{
+					"r": "155",
+					"g": "155",
+					"b": "155",
+					"frame": "0"
+				}
+			]
+		},
+		{
+			"text": "\n(;========\n(func $fmyinfo0offsetinfo (export \"fmyinfo0offsetinfo\") (result externref)\n\tglobal.get $strmyinfo0offsetinfo\n\tcall $getreso\n)\n--------;)\n\n(func $tesss (export \"tesss\")\n\tglobal.get $strkerennn\n\ti32.const 0\n\tcall_indirect (param externref)\n)\n",
+			"visible": true,
+			"time": "0",
+			"speed": "1",
+			"running": false,
+			"color": [
+				{
+					"r": "255",
+					"g": "255",
+					"b": "255",
+					"frame": "0"
+				}
+			]
+		}
+	],
+	[
+		{
+			"text": "\n)\n",
+			"visible": true,
+			"time": "0",
+			"speed": "1",
+			"running": false,
+			"color": [
+				{
+					"r": "255",
+					"g": "00",
+					"b": "255",
+					"frame": "0"
+				}
+			]
+		}
+	]
+]

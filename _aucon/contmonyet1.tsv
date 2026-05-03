@@ -1,0 +1,2 @@
+src	subsrc	volume	buftrimstart	buftrimend	bufduration	bufscale	start
+audio	suara monyet1	.2	0	src	endless	1	0

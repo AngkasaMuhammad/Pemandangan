@@ -1,0 +1,29 @@
+{
+	"myinfo0offsetinfo_GAKEPAKE":{
+		"type":"object",
+		"data":{
+			"perspective":{
+				"type":"Float32Array",
+				"byteOffset":0,
+				"length":16
+			},
+			"cam_transform":{
+				"type":"Float32Array",
+				"byteOffset":64,
+				"length":16
+			},
+			"env_time":{
+				"type":"Float32Array",
+				"byteOffset":128,
+				"length":1
+			}
+		}
+	},
+	"wasmtable0":{
+		"type":"wat_table",
+		"descriptor":{
+			"initial":2,
+			"element":"anyfunc"
+		}
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"audio":{
+		"type":"audio_buffer_list",
+		"descriptor":{},
+		"data":"audio.tsv"
+	},
+	"contenv":{
+		"type":"audio_controller",
+		"descriptor":{},
+		"data":"contenv.tsv"
+	},
+	
+	
+	
+	"contlari":{
+		"type":"audio_controller",
+		"descriptor":{},
+		"data":"contlari.tsv"
+	},
+	"contserang":{
+		"type":"audio_controller",
+		"descriptor":{},
+		"data":"contserang.tsv"
+	},
+	"conthit":{
+		"type":"audio_controller",
+		"descriptor":{},
+		"data":"conthit.tsv"
+	},
+	
+	
+	
+	"contmonyet0":{
+		"type":"audio_controller",
+		"descriptor":{},
+		"data":"contmonyet0.tsv"
+	},
+	"contmonyet1":{
+		"type":"audio_controller",
+		"descriptor":{},
+		"data":"contmonyet1.tsv"
+	},
+	"contkejang":{
+		"type":"audio_controller",
+		"descriptor":{},
+		"data":"contkejang.tsv"
+	},
+	
+	
+	
+	"contretak":{
+		"type":"audio_controller",
+		"descriptor":{},
+		"data":"contretak.tsv"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"monyetstruct":{
+		"type":"storage_struct",
+		"descriptor":{
+			"array":"monyetinfo_array",
+			"offset":384,
+			"length":64,
+			"layout":{
+				"matrix":"mat4x4f",
+				"status":"f32"
+			}
+		}
+	}
+}

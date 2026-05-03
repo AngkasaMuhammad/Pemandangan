@@ -1,0 +1,2 @@
+src	subsrc	volume	buftrimstart	buftrimend	bufduration	bufscale	start
+audio	suara monyet0	.02	0	src	trimmed	1	0
