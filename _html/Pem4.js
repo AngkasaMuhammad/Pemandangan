@@ -13,6 +13,7 @@ V	| attacking monyet ,health
 V	| spawn monyet
 x	| UI
 V	| touch (ga pake zoom)
+>>>	| tampilkan fetch
 
 */
 "use strict"
@@ -28,6 +29,7 @@ import {
 	_monyet,
 	_chara0,
 	_envau,
+	_showfetch,
 } from './Pem4class.js'
 import {
 	mat4 as m4,
@@ -42,6 +44,8 @@ import {
 
 
 
+let fetchinfo = document.querySelector('#fetchinfo')
+_showfetch.init(fetchinfo)
 let canv3d = document.querySelector('#canv3d')
 let PL5 = await main(
 	canv3d,
@@ -289,6 +293,7 @@ _resize3dcanvas.init(
 	m4,
 )
 cam0.fcam(_chara0.chara0xyz)
+fetchinfo.classList.add('hide')
 
 
 //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

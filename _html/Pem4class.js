@@ -603,3 +603,31 @@ export let _envau = class{
 		}
 	}
 }
+
+
+
+
+
+//=========================
+//
+//		DETECT FETCHES
+//
+//=========================
+export let _showfetch = class{
+	static init(fetchinfo){
+		console.log(fetchinfo)
+		new PerformanceObserver((list) => {
+			list.getEntries().forEach((entry) => {
+				if (entry.initiatorType === "fetch") {
+					let mes = '+-+- fetching.... '+entry.name
+					console.log(mes)
+					let div = document.createElement('div')
+					div.textContent = mes
+					fetchinfo.appendChild(div)
+					fetchinfo.scroll(0,Number.MAX_SAFE_INTEGER,)
+				}
+			});
+		}).observe({ entryTypes: ["resource"] });
+		_showfetch.init = 'single use'
+	}
+}
