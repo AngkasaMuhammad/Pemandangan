@@ -1,6 +1,14 @@
 # Pemandangan
 Petarunx menghajar monyet agar tidak mendekat ke pohon agar dunia tetap cerah.  
   
+### Desktop  
+Lari = WASD  
+Serang = mouse down  
+  
+### HP
+Serang = long touch  
+Lari = long touch sambil digeser  
+  
   
 ### Silakan play gamenya dengan click gambar di bawah  
 [
